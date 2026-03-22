@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.zay.java</groupId>
+        <artifactId>java-learning-journey</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>java25-lts</artifactId>
+    <name>10 — Java 25 LTS</name>
+    <description>Scoped Values, Structured Concurrency, Primitive Patterns, Compact Source, Module Imports, Flexible Constructors, KDF API — all stable</description>
+
+</project>

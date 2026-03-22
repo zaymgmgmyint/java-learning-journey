@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ─── Parent coordinates ─────────────────────────────────────── -->
+    <groupId>com.zay.java</groupId>
+    <artifactId>java-learning-journey</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Java Learning Journey</name>
+    <description>Java 8 → 25 learning progression — code examples and notes</description>
+
+    <!-- ─── Modules ─────────────────────────────────────────────────── -->
+    <modules>
+        <module>01-java8-foundations</module>
+        <module>02-java9-11</module>
+        <module>03-java12-14</module>
+        <module>04-java15-16</module>
+        <module>05-java17-lts</module>
+        <module>06-java18-20</module>
+        <module>07-java21-lts</module>
+        <module>10-mini-projects</module>
+        <module>08-java22-24</module>
+        <module>09-java25-lts</module>
+    </modules>
+
+    <!-- ─── Global properties ───────────────────────────────────────── -->
+    <properties>
+        <java.version>25</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- ─── Build plugins (inherited by all modules) ────────────────── -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.13.0</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                        <!-- Enable preview features for modules that need them -->
+                        <!-- Uncomment per-module if using preview features:   -->
+                        <!-- <compilerArgs><arg>- -enable-preview</arg></compilerArgs> -->
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
